@@ -1,0 +1,5 @@
+Athena
+
+Goddess of war and wisdom. A resource manager/job scheduler/distributed threadpool for highly parallel time-slice sequential analysis jobs that are stored on a Cassandra cluster.
+
+Consider a security company that stores data from 1,000,000 close circuit cameras installed at large airports throughout the world.  Records are never erased and so the amount of data expands quickly, leading them to adopt a NoSQL datastore solution.  Automatically generated programs are constantly searching for recognizable patterns in the time slices surrounding known criminal events, and comparing those patterns to other time slices of footage.  Each time slice can be considered a collection of images, but these images must be analyzed sequentially for the algorithm to make sense of them.  The need to analyze the data sequentially makes it difficult or impossible to apply the MapReduce model to these analysis jobs, (which requires that the result of each key-value input to the map function be independent of the other results).  Each job can be done independently of all the other jobs, allowing for significant speedup on a cluster with N independent processing cores.
